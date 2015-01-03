@@ -1,6 +1,6 @@
 {
   "name": "fs-readdir",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "WIP - fs.readdir done right! Support sync, async and stream API, recursiveness and filters.",
   "main": "index.js",
   "scripts": {
