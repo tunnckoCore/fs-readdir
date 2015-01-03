@@ -1,0 +1,44 @@
+{
+  "name": "fs-readdir",
+  "version": "0.0.1",
+  "description": "WIP - fs.readdir done right! Support sync, async and stream API, recursiveness and filters.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tunnckoCore/fs-readdir"
+  },
+  "keywords": [
+    "read",
+    "dir",
+    "directory",
+    "directories",
+    "dirs",
+    "readdir",
+    "readdirs",
+    "files",
+    "file",
+    "filesystem",
+    "file system",
+    "fs",
+    "fs.readdir",
+    "fs.readdirs",
+    "sync",
+    "async",
+    "stream",
+    "recursive",
+    "filter",
+    "filters",
+    "reading",
+    "readdir",
+    "recursive"
+  ],
+  "author": "Charlike Mike Reagent",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tunnckoCore/fs-readdir/issues"
+  },
+  "homepage": "https://github.com/tunnckoCore/fs-readdir"
+}
