@@ -1,6 +1,23 @@
-# fs.readdir done right!
+## [![npm][npmjs-img]][npmjs-url] [![mit license][license-img]][license-url] [![build status][travis-img]][travis-url] [![coverage status][coveralls-img]][coveralls-url] [![deps status][daviddm-img]][daviddm-url]
 
-### WIP
+> WIP - fs.readdir done right! Support sync, async, stream and promise API, recursiveness and filters.
+
+## Install, Test & Benchmark
+```bash
+npm install fs-readdir
+npm test
+npm run benchmark
+npm run matcha
+```
+
+
+## Usage
+> For more use-cases see the [tests](./test.js)
+
+```js
+var fsReaddir = require('fs-readdir');
+```
+
 
 ## Author
 **Charlike Mike Reagent**
@@ -41,4 +58,4 @@ Released under the [`MIT`][license-url] license.
 
 ***
 
-_Powered and automated by [kdf](https://github.com/tunnckoCore), December 03, 2015_
+_Powered and automated by [kdf](https://github.com/tunnckoCore), January 3, 2015_
