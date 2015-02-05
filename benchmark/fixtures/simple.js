@@ -1,3 +1,3 @@
 module.exports = [
-  '../gitclone-cli', function() {}
+  './benchmark', function() {}
 ]
