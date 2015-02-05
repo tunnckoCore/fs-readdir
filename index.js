@@ -120,52 +120,6 @@ function fsReaddirAsync(root, opts, callback) {
   return stream;
 }
 
-// function fsReaddirCallback(err, data, callback) {
-//   if (err) {
-//     callback(err);
-//     return;
-//   }
-
-//   var res = [];
-//   var pending = data[1].length;
-
-//   if (!pending) {
-//     callback(null, data[1]);
-//     return;
-//   }
-
-//   eachAsync(data[1], function(fp) {
-//     eachFilepath(path.join(data[0], fp), [data[1], pending], callback);
-//   }, function (err) {
-//     if (err) {
-//       callback(err);
-//       return;
-//     }
-//     callback(null, data[1]);
-//   });
-// }
-
-// function eachFilepath(fp, data, callback) {
-//   fs.stat(fp, function(err, stats) {
-//     if (err) {
-//       callback(err);
-//       return;
-//     }
-
-//     if (stats.isDirectory()) {
-//       fsReaddirAsync(fp, callback);
-//       return;
-//     }
-
-//     data[0].push(fp);
-//     data[1] -= 1;
-//     if (!data[1]) {
-//       callback(null, data[0].concat(data[0]));
-//       return;
-//     }
-//   });
-// }
-
 /**
  * `fs-readdir-recursive` without filter feature
  *
