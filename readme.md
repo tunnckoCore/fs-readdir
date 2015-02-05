@@ -3,13 +3,12 @@
 > WIP - fs.readdir done right! Support sync, async, stream and promise API, recursiveness and filters.
 
 ## Install, Test & Benchmark
-```bash
-npm install fs-readdir
-npm test
-npm run benchmark
-npm run matcha
+```
+npm i --save fs-readdir
 ```
 
+**readdirp's and recursive-readdir's use of `minimatch` is replaced with `micromatch`  
+readdirp's stream api now use `npm.im/immediate` instead of setImmediate/setTimeout**
 
 ## Usage
 > For more use-cases see the [tests](./test.js)

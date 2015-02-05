@@ -23,17 +23,17 @@ module.exports.sync = fsReaddirSync;
  * @param  {Function} `[callback]`
  */
 function fsReaddirAsync(root, opts, callback) {
-  // if (typeof root !== 'string') {
-  //   throw new TypeError('fsReaddir: expect `root` to be string');
-  // }
-  // if (typeof opts === 'function') {
-  //   callback = opts;
-  //   opts = {
-  //     objectMode: true,
-  //     EventEmitter: false,
-  //     emitterOptions: {maxListeners: 1},
-  //   };
-  // }
+  if (typeof root !== 'string') {
+    throw new TypeError('fsReaddir: expect `root` to be string');
+  }
+  if (typeof opts === 'function') {
+    callback = opts;
+    opts = {
+      objectMode: true,
+      EventEmitter: false,
+      emitterOptions: {maxListeners: 1},
+    };
+  }
 
   opts = opts || {};
 
@@ -41,19 +41,19 @@ function fsReaddirAsync(root, opts, callback) {
   var stream = false;
   var ____cb = callback || noop;
 
-  // if (typeof callback !== 'function') {
-  //   opts.objectMode = opts.objectMode || true;
-  //   stream = new ReaddirReadable(opts);
-  // } else {
-  //   if (opts.EventEmitter) {
-  //     opts.EventEmitter.prototype.destroy = ReaddirReadable.prototype.destroy;
-  //     stream = new opts.EventEmitter(opts.emitterOptions);
-  //   }
-  // }
+  if (typeof callback !== 'function') {
+    opts.objectMode = opts.objectMode || true;
+    stream = new ReaddirReadable(opts);
+  } else {
+    if (opts.EventEmitter) {
+      opts.EventEmitter.prototype.destroy = ReaddirReadable.prototype.destroy;
+      stream = new opts.EventEmitter(opts.emitterOptions);
+    }
+  }
 
-  // if (!stream) {
-  //   stream = {push: noop, emit: noop, destroy: noop};
-  // }
+  if (!stream) {
+    stream = {push: noop, emit: noop, destroy: noop};
+  }
 
   callback = function callbackAndEvents(err, res) {
     ____cb(err, res);
