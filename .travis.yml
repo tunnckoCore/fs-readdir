@@ -4,7 +4,7 @@ node_js:
   - "0.11"
 matrix:
   allow_failures:
-    - node_js: "0.11"
+    - node_js: "0.10"
   fast_finish: true
 script: "node benchmark"
 # script: "npm run-script test-travis"
