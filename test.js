@@ -7,13 +7,47 @@
 
 'use strict';
 
+
+
+
+var path = require('path');
+var through2 = require('through2');
 var fsReaddir = require('./index');
 
-// Hybrid (Async) API - Promise + callback
-// fsReaddir('../dotfiles', function __cb(err, res) {
-//   console.log('__cb err:', err);
-//   console.log('__cb res:', res);
+var CoreEmitter = require('events').EventEmitter;
+var DualEmitter = require('dual-emitter');
+var Emitter2 = require('eventemitter2').EventEmitter2;
+
+// var stream = fsReaddir('../gitclone-cli')
+// .on('error', function(err) {
+//   console.log('ERR', err);
 // })
+// .on('finish', function(obj) {
+//   console.log('finish', obj);
+// })
+// .on('data', function(obj) {
+//   console.log('data', obj);
+// })
+// .on('folder', function(folder) {
+//   console.log('folder', folder);
+// })
+// .on('file', function(file) {
+//   console.log('file', file);
+// })
+// .pipe(through2.obj(function(objArray, enc, next) {
+//   objArray = objArray.map(function(fp) {
+//     return path.basename(fp);
+//   })
+//   console.log('pipe1', objArray);
+//   this.push(objArray)
+//   next();
+// })).pipe(through2.obj(function(modified, enc, next) {
+//   console.log('pipe2', modified);
+//   this.push(modified)
+//   next();
+// }))
+
+
 // .then(function __fulfilled(res) {
 //   console.log('__fulfilled:', res);
 // })
