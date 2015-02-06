@@ -9,7 +9,7 @@
 
 var fs = require('fs');
 var path = require('path');
-var ReaddirReadable = require('./stream-api');
+var ReaddirReadable = require('stream').Readable;
 var noop = function() {};
 
 module.exports = fsReaddirAsync;
@@ -80,6 +80,7 @@ function fsReaddirAsync(root, opts, callback) {
     }
 
     files.forEach(function(fp) {
+      if (aborted) {return;}
       fp = path.join(root, fp)
 
       fs.stat(fp, function(err, stats) {
@@ -147,3 +148,11 @@ function fsReaddirSync(root, files, fp) {
 
   return files;
 }
+
+
+ReaddirReadable.prototype._read = function() {};
+ReaddirReadable.prototype.destroy = function() {
+  this.push && this.push(null);
+  this.readable = false;
+  this.emit('close');
+};
