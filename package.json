@@ -1,7 +1,7 @@
 {
   "name": "fs-readdir",
-  "version": "0.0.0",
-  "description": "WIP - fs.readdir done right! Support sync, async, stream and promise API, recursiveness and filters.",
+  "version": "0.0.3",
+  "description": "fs.readdir done right! Support sync, async and stream API, recursiveness and filters/globs.",
   "scripts": {
     "lint": "jshint index.js && jscs index.js --reporter inline",
     "test": "mocha",
@@ -10,7 +10,7 @@
     "benchmark": "node benchmark"
   },
   "author": {
-    "name": "Charlike Make Reagent",
+    "name": "Charlike Mike Reagent",
     "email": "mameto_100@mail.bg",
     "url": "https://github.com/tunnckoCore"
   },
@@ -18,15 +18,38 @@
     "type": "git",
     "url": "git://github.com/tunnckoCore/fs-readdir.git"
   },
-  "keywords": [],
+  "keywords": [
+    "api",
+    "apis",
+    "async",
+    "better",
+    "dir",
+    "directory",
+    "expression",
+    "faster",
+    "fastest",
+    "files",
+    "filters",
+    "folder",
+    "fs",
+    "glob",
+    "pattern",
+    "performance",
+    "read",
+    "readdir",
+    "recursive",
+    "regular",
+    "stream",
+    "streaming",
+    "sync"
+  ],
   "license": {
     "type": "MIT",
     "url": "https://github.com/tunnckoCore/fs-readdir/blob/master/license.md"
   },
-  "dependencies": {
-    "through2": "~1.1.1"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "through2": "~1.1.1",
     "arr-map": "^1.0.0",
     "benchmarked": "^0.1.3",
     "dual-emitter": "0.0.4",
