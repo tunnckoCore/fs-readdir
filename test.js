@@ -47,7 +47,6 @@ var Emitter2 = require('eventemitter2').EventEmitter2;
 //   next();
 // }))
 
-
 // .then(function __fulfilled(res) {
 //   console.log('__fulfilled:', res);
 // })
