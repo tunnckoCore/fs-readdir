@@ -149,10 +149,12 @@ function fsReaddirSync(root, files, fp) {
   return files;
 }
 
-
 ReaddirReadable.prototype._read = function() {};
 ReaddirReadable.prototype.destroy = function() {
-  this.push && this.push(null);
+  if (this.push) {
+    this.push(null);
+  }
+
   this.readable = false;
   this.emit('close');
 };

@@ -7,8 +7,7 @@
     "test": "mocha",
     "test-cov": "istanbul cover _mocha",
     "test-travis": "istanbul cover _mocha --report lcovonly",
-    "benchmark": "node benchmark",
-    "matcha": "matcha benchmark/matcha.js"
+    "benchmark": "node benchmark"
   },
   "author": {
     "name": "Charlike Make Reagent",
