@@ -1,3 +1,3 @@
 module.exports = [
-  './benchmark', function() {}
+  '/home/charlike/dev/fs-readdir', function() {}
 ]
