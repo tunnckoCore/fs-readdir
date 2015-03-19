@@ -1,0 +1,1 @@
+file:/home/charlike/dev/glob-fs/fixtures/a/h5.js

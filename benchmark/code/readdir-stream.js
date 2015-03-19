@@ -1,5 +1,7 @@
+var path = require('path');
 var rs = require('readdir-stream');
 
 module.exports = function index(root, cb) {
-  return rs(root + '/benchmark/').on('data', cb);
+  root = path.join(root, '../playing');
+  return rs(root).on('data', cb);
 };

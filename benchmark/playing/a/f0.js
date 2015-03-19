@@ -1,0 +1,1 @@
+file:/home/charlike/dev/glob-fs/fixtures/a/f0.js

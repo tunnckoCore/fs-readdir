@@ -1,0 +1,1 @@
+file:/home/charlike/dev/glob-fs/fixtures/a/d9.js
