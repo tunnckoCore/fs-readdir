@@ -1,0 +1,37 @@
+{
+  "name": "glob-fs",
+  "version": "0.0.0",
+  "description": "node.js glob matching lib",
+  "scripts": {
+    "lint": "jshint index.js && jscs index.js --reporter inline",
+    "test": "mocha",
+    "test-cov": "istanbul cover _mocha",
+    "test-travis": "istanbul cover _mocha --report lcovonly"
+  },
+  "author": {
+    "name": "Charlike Mike Reagent",
+    "email": "mameto_100@mail.bg",
+    "url": "https://github.com/tunnckoCore"
+  },
+  "repository": {},
+  "keywords": [],
+  "license": {},
+  "dependencies": {
+    "arr-flatten": "^1.0.1",
+    "array-unique": "^0.2.0",
+    "debug": "^2.1.3",
+    "each-async": "^1.1.1",
+    "glob-parent": "^1.2.0",
+    "is-glob": "^1.1.3",
+    "micromatch": "^2.1.0",
+    "strip-bom": "^1.0.0",
+    "vinyl": "^0.4.6"
+  },
+  "devDependencies": {
+    "glob-stream": "^5.0.0",
+    "gulp": "^3.8.11",
+    "istanbul-harmony": "^0.3.1",
+    "mocha": "^2.2.1",
+    "vinyl-fs": "^1.0.0"
+  }
+}
